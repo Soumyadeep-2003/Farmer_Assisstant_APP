@@ -15,7 +15,7 @@ init_session_state()
 
 # Page configuration
 st.set_page_config(
-    page_title="Farm Assist",
+    page_title="AgriSense",
     page_icon="🌾",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -104,7 +104,7 @@ def show_main_content():
         st.markdown("---")
         st.markdown("### About")
         st.markdown("""
-            Farm Assist helps you monitor your crops through:
+            AgriSense helps you monitor your crops through:
             - 📸 Image Analysis
             - 📊 Health Tracking
             - 📈 Historical Data
@@ -114,13 +114,13 @@ def show_main_content():
     if page == "Crop Details":
         show_crop_details()
     elif page == "Dashboard":
-        st.title("🌾 Farm Assist Dashboard")
+        st.title("🌾 AgriSense Dashboard")
 
         if hasattr(st.session_state, 'selected_crop_name'):
             st.subheader(f"Viewing: {st.session_state.selected_crop_name}")
 
         st.markdown("""
-        Welcome to Farm Assist! This tool helps you:
+        Welcome to AgriSense! This tool helps you:
 
         1. **Analyze Crop Images** - Upload field photos for instant health assessment
         2. **Track Health Metrics** - Monitor NDVI scores and stress levels
